@@ -30,9 +30,8 @@ RSpec.describe Country, type: :model do
       # List the number of countries in Europe that have a surface area greater than 200,000 km squared.
       area = 200_000
       countries = Country
-        .where("surfacearea > ?", area)
+        .where("surfacearea > ???", area)
         .where(continent: 'Europe')
-      # This test passes!
       expect(countries.count).to eq(13)
     end
 
