@@ -26,7 +26,7 @@ RSpec.describe Country, type: :model do
       expect(canada.surfacearea).to eq(9970610.0)
     end
 
-    it "can find records via equality comparrison (class)" do
+    it "can find records via equality comparison (class)" do
       # List the number of countries in Europe that have a surface area greater than 200,000 km squared.
       area = 200_000
       countries = Country
@@ -35,28 +35,28 @@ RSpec.describe Country, type: :model do
       expect(countries.count).to eq(13)
     end
 
-    it "can find records via equality comparrison" do
+    it "can find records via equality comparison" do
       # List the countries in Europe that have a life expectancy of more than 78?
       countries = Country
       expect(countries.count).to eq(15)
     end
 
-    it "can find records via equality comparrison" do
+    it "can find records via equality comparison" do
       # List the countries in Europe that have a life expectancy of less than 77?
       expect(countries.count).to eq(22)
     end
 
-    it "can combine comaparisons" do
+    it "can combine comparisons" do
       # List the countries in Europe that have a life expectancy of less than 77 and surfacearea less than 50,000km?
       expect(countries.count).to eq(7)
     end
 
-    it "can find records via equality comparrison" do
+    it "can find records via equality comparison" do
       # List the countries that have a population larger than 30,000,000 and a life expectancy of more than 45?
       expect(countries.count).to eq(35)
     end
 
-    it "can find records via multiple equality comparrisons" do
+    it "can find records via multiple equality comparisons" do
       # List the countries in Africa that have a population smaller than 30,000,000 and a life expectancy of more than 45?
       countries = Country.where(continent: 'Africa').where('popultion < 30000000').where('lifeexpectancy > 45').count
       expect(countries.count).to eq(37)
