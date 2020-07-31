@@ -1,13 +1,11 @@
-require 'rails_helper'
-
 # STRETCH CHALLENGES
+
+require 'rails_helper'
 
 RSpec.describe Country, type: :model do
   it "should find languages" do
     switzerland = Country.where(code: 'CHE').first
-
     languages = nil  #replace 'nil' with your code
-
     ["German", "French", "Italian", "Romansh"].each do |language|
       expect(languages).to include(language)
     end
