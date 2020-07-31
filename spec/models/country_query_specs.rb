@@ -27,68 +27,37 @@ RSpec.describe Country, type: :model do
     end
 
     it "can find records via equality comparison (class)" do
-<<<<<<< HEAD
       # How many countries in Europe have a surface area greater than 200,000sqkm?
       area = 200_000
       countries = Country
         .where(continent: 'Europe')
         .where("surfacearea > ????")
-=======
-      # List the number of countries in Europe that have a surface area greater than 200,000 km squared.
-      area = 200_000
-      countries = Country
-        .where("surfacearea > ???", area)
-        .where(continent: 'Europe')
->>>>>>> 3644d1381fe2988bf75ad116f030e0291d0b636f
       expect(countries.count).to eq(13)
     end
 
     it "can find records via equality comparison" do
-<<<<<<< HEAD
       # How many countries in Europe have a life expectancy of more than 78?
-=======
-      # List the countries in Europe that have a life expectancy of more than 78?
-      countries = Country
->>>>>>> 3644d1381fe2988bf75ad116f030e0291d0b636f
       expect(countries.count).to eq(15)
     end
 
     it "can find records via equality comparison" do
-<<<<<<< HEAD
       # How many countries in Europe have a life expectancy of less than 77?
-=======
-      # List the countries in Europe that have a life expectancy of less than 77?
->>>>>>> 3644d1381fe2988bf75ad116f030e0291d0b636f
       expect(countries.count).to eq(22)
     end
 
     it "can combine comparisons" do
-<<<<<<< HEAD
       # How many countries in Europe have a life expectancy of less than 77 and surface area less than 50,000sqkm?
-=======
-      # List the countries in Europe that have a life expectancy of less than 77 and surfacearea less than 50,000km?
->>>>>>> 3644d1381fe2988bf75ad116f030e0291d0b636f
       expect(countries.count).to eq(7)
     end
 
     it "can find records via equality comparison" do
-<<<<<<< HEAD
       # How many countries have a population larger than 30,000,000 and a life expectancy of more than 45?
-=======
-      # List the countries that have a population larger than 30,000,000 and a life expectancy of more than 45?
->>>>>>> 3644d1381fe2988bf75ad116f030e0291d0b636f
       expect(countries.count).to eq(35)
     end
 
     it "can find records via multiple equality comparisons" do
-<<<<<<< HEAD
       # How many countries in Africa have a population smaller than 30,000,000 and a life expectancy of more than 45?
       expect(countries.count).to eq(8)
-=======
-      # List the countries in Africa that have a population smaller than 30,000,000 and a life expectancy of more than 45?
-      countries = Country.where(continent: 'Africa').where('popultion < 30000000').where('lifeexpectancy > 45').count
-      expect(countries.count).to eq(37)
->>>>>>> 3644d1381fe2988bf75ad116f030e0291d0b636f
    end
 
     it "can find records using wildcards" do
